@@ -1,0 +1,456 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #a7c0f5 0%, #d5dfff 40%, #a0a5fb 80%, #8892db 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .containerOG {
+            background: linear-gradient(180deg, #a7c0f5 0%, #d5dfff 40%, #a0a5fb 80%, #8892db 100%);
+            border-radius: 0;
+            padding: 5%;
+            width: 100%;
+            min-height: 100vh;
+            box-shadow: none;
+            margin: 0;
+            padding-top: 6rem;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, #8892db 100%, #b5dcff 0%);
+            padding: 1.25rem 5%;
+            z-index: 1000;
+            box-shadow: 0 0.125rem 0.625rem rgba(45, 45, 141, 0.1);
+        }
+        .nav {
+            display: flex;
+            gap: 2rem;
+            font-size: 1rem;
+            color: #c9386d;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav a {
+            color: #ebf0ed;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .logo {
+            font-weight: bold;
+            color: #2d2d8d;
+        }
+
+        .btn-contact {
+            background: #2d2d8d;
+            color: white;
+            padding: 0.5rem 1.25rem;
+            border-radius: 1.25rem;
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-left: auto;
+            white-space: nowrap;
+        }
+
+        h1 {
+            font-size: 4vw;
+            color: #2d2d8d;
+            margin-bottom: 3rem;
+            margin-top: 7rem;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(45, 45, 141, 0.2);
+        }
+        
+        
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            color: #2d2d8d;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        label .required {
+            color: #e74c3c;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #c1c7f6;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #558d2d;
+            box-shadow: 0 0 0 3px rgba(45, 45, 141, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        select {
+            cursor: pointer;
+            border: none;
+            box-shadow: none;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: #2d2d8d;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background: #1e1e5d;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(45, 45, 141, 0.3);
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+
+        .btn-back {
+            display: inline-block;
+            color: #2d2d8d;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .btn-back:hover {
+            text-decoration: underline;
+        }
+
+        .info-box {
+            background: #f0f5ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            border-left: 4px solid #2d2d8d;
+        }
+
+        .info-box p {
+            color: #4d4d9d;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #c1c7f6;
+        }
+
+        .contact-info p {
+            color: #4d4d9d;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+                margin: 20px auto;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+ 
+.custom-select {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-selected {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+    color: #2d2d8d;
+    padding: 15px 18px;
+    border: 2.5px solid #c1c7f6;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: none;
+}
+
+.select-selected:hover {
+    border-color: #2d2f8d;
+    box-shadow: 0 5px 15px rgba(45, 45, 141, 0.1);
+    transform: translateY(-2px);
+}
+
+.select-selected.active {
+    border-color: #2d2d8d;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 5px 15px rgba(45, 45, 141, 0.2);
+}
+
+/* Icono del select */
+
+.select-arrow {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #482d8d;
+    transition: transform 0.3s ease;
+    margin-left: 10px;
+}
+
+.select-selected.active .select-arrow {
+    transform: rotate(180deg);
+}
+
+/* Opciones del select */
+/*ES AQUIIIIIIIII*/
+
+.select-items {
+    position: absolute;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f8ff 100%);
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 2.5px solid transparent;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    z-index: 99;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(45, 45, 141, 0.1);
+}
+
+.select-items.active {
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(45, 45, 141, 0.2);
+}
+
+/* Scroll personalizado */
+.select-items.active::-webkit-scrollbar {
+    width: 8px;
+}
+
+.select-items.active::-webkit-scrollbar-track {
+    background: #f0f5ff;
+}
+
+.select-items.active::-webkit-scrollbar-thumb {
+    background: #a7c0f5;
+    border-radius: 4px;
+}
+
+.select-items.active::-webkit-scrollbar-thumb:hover {
+    background: #2d2d8d;
+}
+
+/* Cada opción */
+.select-item {
+    padding: 14px 18px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    color: #4d4d9d;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.select-item:hover {
+    background: linear-gradient(135deg, #a7c0f5 0%, #b5dcff 100%);
+    color: #2d2d8d;
+    font-weight: 600;
+    padding-left: 25px;
+}
+
+.select-item.selected {
+    background: linear-gradient(135deg, #8892db 0%, #a0a5fb 100%);
+    color: white;
+    font-weight: 700;
+    border-left: 4px solid #2d2d8d;
+    padding-left: 14px;
+}
+
+.select-item.same-as-selected {
+    background: linear-gradient(135deg, #a7c0f5 0%, #b5dcff 100%);
+    color: #2d2d8d;
+    font-weight: 600;
+}
+
+/* Opción deshabilitada */
+.select-item.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: #f5f5f5;
+    color: #999;
+}
+
+/* Responsive para select personalizado */
+
+/* TABLETS Y DISPOSITIVOS MEDIANOS (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .select-selected {
+        font-size: 15px;
+        padding: 14px 16px;
+    }
+
+    .select-item {
+        font-size: 15px;
+        padding: 13px 16px;
+        border-bottom: none;
+    }
+
+    .select-items.active {
+        max-height: 280px;
+    }
+
+    .select-arrow {
+        border-left: 5.5px solid transparent;
+        border-right: 5.5px solid transparent;
+        border-top: 7px solid #2d2d8d;
+    }
+}
+
+/* DISPOSITIVOS MÓVILES (320px - 768px) */
+@media (max-width: 768px) {
+    .select-selected {
+        font-size: 16px;
+        padding: 16px 15px;
+        border-radius: 10px;
+    }
+
+    .select-item {
+        font-size: 16px;
+        padding: 14px 15px;
+        border-bottom: none;
+    }
+
+    .select-items {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .select-items.active {
+        max-height: 250px;
+    }
+
+    .select-arrow {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid #2d2d8d;
+        margin-left: 8px;
+    }
+
+    .select-item:hover {
+        padding-left: 20px;
+    }
+
+    .select-item.selected {
+        padding-left: 11px;
+    }
+}
+
+/* PANTALLAS GRANDES (LAPTOPS - 1025px en adelante) */
+@media (min-width: 1025px) {
+    .select-selected {
+        font-size: 16px;
+        padding: 15px 18px;
+        border-radius: 12px;
+    }
+
+    .select-item {
+        font-size: 16px;
+        padding: 14px 18px;
+        border-bottom: none;
+    }
+
+    .select-items {
+        border-radius: 0 0 12px 12px;
+    }
+
+    .select-items.active {
+        max-height: 350px;
+    }
+
+    .select-arrow {
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 8px solid #2d2d8d;
+        margin-left: 10px;
+    }
+
+    .select-item:hover {
+        padding-left: 25px;
+    }
+
+    .select-item.selected {
+        padding-left: 14px;
+    }
+}

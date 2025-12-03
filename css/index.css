@@ -1,0 +1,708 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1a1a1a;
+    color: #333;
+}
+
+/* Animaciones */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.page {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background: linear-gradient(180deg, #a7c0f5 0%, #d5dfff 40%, #a0a5fb 80%, #8892db 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+    border-radius: 0;
+    padding: 5%;
+    width: 100%;
+    min-height: 100vh;
+    box-shadow: none;
+    margin: 0;
+    padding-top: 6rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, #8892db 100%, #b5dcff 0%);
+    padding: 1.25rem 5%;
+    z-index: 1000;
+    box-shadow: 0 0.125rem 0.625rem rgba(45, 45, 141, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.header:hover {
+    box-shadow: 0 0.25rem 1rem rgba(45, 45, 141, 0.2);
+}
+
+.nav {
+    display: flex;
+    gap: 2rem;
+    font-size: 1rem;
+    color: #c9386d;
+    align-items: center;
+    width: 100%;
+}
+
+.nav a {
+    color: #ebf0ed;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ebf0ed;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.nav a:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 2px 8px rgba(235, 240, 237, 0.3);
+}
+
+.logo {
+    font-weight: bold;
+    color: #2d2d8d;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.btn-contact {
+    background: #2d2d8d;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-left: auto;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(45, 45, 141, 0.2);
+}
+
+.btn-contact:hover {
+    background: #1e1e5d;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(45, 45, 141, 0.4);
+}
+
+.btn-contact:active {
+    transform: translateY(-1px);
+}
+
+h1 {
+    font-size: 4.5vw;
+    color: #2d2d8d;
+    margin-bottom: 3rem;
+    margin-top: 7rem;
+    line-height: 1.2;
+    text-align: center;
+    animation: fadeInUp 0.8s ease;
+    text-shadow: 0 2px 10px rgba(45, 45, 141, 0.1);
+}
+
+.subtitle {
+    font-size: 1.8vw;
+    color: #4d4d9d;
+    margin-bottom: 0;
+    margin-top: 1vw;
+    text-align: center;
+    animation: fadeInUp 0.8s ease 0.2s backwards;
+}
+
+.cta-button {
+    background: white;
+    color: #2d2d8d;
+    padding: 1em 2.5em;
+    border-radius: 2.5vw;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    font-weight: 600;
+    margin: 3vw auto;
+    font-size: 1.4vw;
+    margin-bottom: 10rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 20px rgba(45, 45, 141, 0.2);
+    animation: scaleIn 0.6s ease 0.4s backwards;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 15px 35px rgba(45, 45, 141, 0.35);
+    background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+}
+
+.cta-button:active {
+    transform: translateY(-2px) scale(1.05);
+}
+
+.tagline {
+    font-size: 1.7vw;
+    background: linear-gradient(135deg, #8892db 0%, #9ba5e8 100%);
+    padding: 1.2em 0em;
+    border-radius: 1.2rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    color: #ffffff;
+    font-weight: 500;
+    box-shadow: 0 10px 30px rgba(136, 146, 219, 0.3);
+    transition: all 0.4s ease;
+    animation: fadeIn 0.8s ease 0.6s backwards;
+}
+
+.tagline:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(136, 146, 219, 0.4);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1.875rem;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(45, 45, 141, 0.1);
+    animation: fadeInUp 0.6s ease backwards;
+    animation-delay: calc(var(--card-index, 0) * 0.1s);
+}
+
+.feature-card:nth-child(1) { --card-index: 1; }
+.feature-card:nth-child(2) { --card-index: 2; }
+.feature-card:nth-child(3) { --card-index: 3; }
+.feature-card:nth-child(4) { --card-index: 4; }
+.feature-card:nth-child(5) { --card-index: 5; }
+.feature-card:nth-child(6) { --card-index: 6; }
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 20px 40px rgba(45, 45, 141, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.feature-card i {
+    transition: all 0.4s ease;
+    display: inline-block;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card:hover i {
+    transform: scale(1.2) rotate(5deg);
+    animation: float 2s ease-in-out infinite;
+}
+
+.feature-icon {
+    font-size: 2.8rem;
+    margin-bottom: 0.9375rem;
+}
+
+.feature-title {
+    font-weight: 600;
+    color: #2d2d8d;
+    margin-bottom: 0.8rem;
+    font-size: 1.35rem;
+    transition: color 0.3s ease;
+}
+
+.feature-card:hover .feature-title {
+    color: #1e1e5d;
+}
+
+.feature-text {
+    font-size: 1rem;
+    color: #4d4d9d;
+    line-height: 1.7;
+}
+
+.why-roca-section {
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+    animation: fadeIn 0.8s ease;
+}
+
+.why-roca-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.75rem;
+    margin-bottom: 10rem;
+    padding-top: 0rem;
+}
+
+.why-roca-header h1 {
+    flex: 1;
+    text-align: right;
+    font-size: 4vw;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+}
+
+.why-roca-header img {
+    flex: 1;
+    width: 40%;
+    height: auto;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    box-shadow: 0 15px 40px rgba(45, 45, 141, 0.2);
+}
+
+.why-roca-header img:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 20px 50px rgba(45, 45, 141, 0.3);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.benefit-item {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(45, 45, 141, 0.15);
+}
+
+.benefit-item:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 20px 45px rgba(45, 45, 141, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.hrstyle {
+    width: 30rem;
+    margin: 2rem auto;
+    border: none;
+    height: 0.3rem;
+    background: linear-gradient(90deg, #c1c7f6, #2d2d8d, #c1c7f6);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover .hrstyle {
+    transform: scaleX(1.1);
+    box-shadow: 0 2px 10px rgba(45, 45, 141, 0.3);
+}
+
+.benefit-title {
+    font-weight: 600;
+    color: #2d2d8d;
+    margin-bottom: 1rem;
+    font-size: 1.65rem;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover .benefit-title {
+    color: #1e1e5d;
+    transform: scale(1.05);
+}
+
+.benefit-text {
+    color: #4d4d9d;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.benefit-itemLAST {
+    grid-column: 1 / -1;
+    max-width: 55%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(45, 45, 141, 0.15);
+}
+
+.benefit-itemLAST:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 20px 45px rgba(45, 45, 141, 0.25);
+}
+
+.footer {
+    font-weight: 600;
+    margin-top: 7.125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 0.15rem solid rgba(244, 241, 241, 0.781);
+    font-size: 0.95rem;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.footer div {
+    transition: all 0.3s ease;
+}
+
+.footer div:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* para ipad */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 3%;
+    }
+
+    .nav {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .nav a {
+        font-size: 0.9rem;
+    }
+
+    .btn-contact {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .container {
+        padding: 3%;
+        padding-top: 5rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .subtitle {
+        font-size: 1.4rem;
+    }
+
+    .cta-button {
+        padding: 0.8em 1.8em;
+        font-size: 1.1rem;
+        margin-bottom: 8rem;
+    }
+
+    .tagline {
+        font-size: 1.4rem;
+        padding: 1em;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+
+    .feature-title {
+        font-size: 1.2rem;
+    }
+
+    .feature-text {
+        font-size: 0.95rem;
+    }
+
+    .why-roca-section {
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+    }
+
+    .why-roca-header {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .why-roca-header h1 {
+        text-align: center;
+        font-size: 2.3rem;
+        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .why-roca-header img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .benefit-item {
+        padding: 1.8rem;
+    }
+
+    .hrstyle {
+        width: 20rem;
+        margin: 1.5rem auto;
+    }
+
+    .benefit-title {
+        font-size: 1.4rem;
+    }
+
+    .benefit-text {
+        font-size: 1rem;
+    }
+
+    .benefit-itemLAST {
+        max-width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+
+/*para cel*/
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+    }
+
+    .header {
+        padding: 0.8rem 2%;
+        margin-bottom: 1rem;
+    }
+
+    .nav {
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .nav a {
+        font-size: 0.75rem;
+    }
+
+    .logo {
+        font-size: 0.9rem;
+    }
+
+    .btn-contact {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+        margin-left: auto;
+    }
+
+    .container {
+        padding: 2%;
+        padding-top: 4.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        margin-top: 4rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .cta-button {
+        padding: 0.7em 1.5em;
+        font-size: 0.95rem;
+        margin: 2rem auto;
+        margin-bottom: 6rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+        padding: 0.8em;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .feature-card {
+        padding: 1.3rem;
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .feature-title {
+        font-size: 1rem;
+    }
+
+    .feature-text {
+        font-size: 0.85rem;
+    }
+
+    .why-roca-section {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .why-roca-header {
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .why-roca-header h1 {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .why-roca-header img {
+        width: 100%;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .benefit-item {
+        padding: 1.3rem;
+    }
+
+    .hrstyle {
+        width: 100%;
+        max-width: 15rem;
+        margin: 1rem auto;
+    }
+
+    .benefit-title {
+        font-size: 1.1rem;
+    }
+
+    .benefit-text {
+        font-size: 0.9rem;
+    }
+
+    .benefit-itemLAST {
+        max-width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+        font-size: 0.8rem;
+        margin-top: 3rem;
+    }
+}
