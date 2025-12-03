@@ -5,107 +5,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/contact.css">
-    <title>ROCA - Gestiona más, trabaja menos</title>
+    <title>Stokk It - Contáctanos</title>
 </head>
 <body>
     <div class="page">
-        <div class="containerOG">
+        <div class="container-wrapper">
             <div class="header">
                 <nav class="nav">
-                    <a href="index.html" class="active">Inicio</a>
+                    <a href="index.html">Inicio</a>
                     <a href="quienes_somos.html">¿Quiénes somos?</a>
-                    <a href="por_que_roca.html">¿Por qué ROCA?</a>
-                    <div class="logo">logo roca</div>
+                    <a href="por_que_stokkit.html">¿Por qué Stokk It?</a>
+                    <a href="planes.html">Planes</a>
+                    <div class="logo">
+                        <img src="1764794260680_Imagen_de_WhatsApp_2025-12-03_a_las_00_19_42_82fbd986.jpg" alt="Stokk It" class="logo-img">
+                    </div>
                 </nav>
             </div>
-        <div class="container">
 
-        <div class="info-box">
-            <p>💡 Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas.</p>
-        </div>
+            <div class="content-container">
+                <div class="contact-hero">
+                    <h1>Hablemos de tu negocio</h1>
+                    <p class="subtitle">Estamos aquí para ayudarte a crecer</p>
+                </div>
 
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            
-            <div class="form-group">
-                <label for="name">Nombre completo <span class="required">*</span></label>
-                <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez">
-            </div>
+                <div class="form-container">
+                    <div class="info-box">
+                        <i class="fas fa-clock"></i>
+                        <p>Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas</p>
+                    </div>
 
-            <div class="form-group">
-                <label for="email">Correo electrónico <span class="required">*</span></label>
-                <input type="email" id="email" name="email" required placeholder="tu@email.com">
-            </div>
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nombre completo <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez García">
+                            </div>
 
-            <div class="form-group">
-                <label for="phone">Teléfono <span class="required">*</span></label>
-                <input type="tel" id="phone" name="phone" required placeholder="+52 123 456 7890">
-            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+                        </div>
 
-            <div class="form-group">
-                <label for="company">Nombre de tu empresa <span class="required">*</span></label>
-                <input type="text" id="company" name="company" required placeholder="Ej: Mi Empresa S.A.">
-            </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Teléfono <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+52 123 456 7890">
+                            </div>
 
-            <div class="form-group">
-                <label for="industry">Giro de tu negocio <span class="required">*</span></label>
-                <div class="custom-select">
-                    <select id="industry" name="industry" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="retail">Retail / Comercio</option>
-                        <option value="servicios">Servicios</option>
-                        <option value="tecnologia">Tecnología</option>
-                        <option value="manufactura">Manufactura</option>
-                        <option value="alimentos">Alimentos y Bebidas</option>
-                        <option value="salud">Salud</option>
-                        <option value="educacion">Educación</option>
-                        <option value="otro">Otro</option>
-                    </select>
+                            <div class="form-group">
+                                <label for="company">Nombre de tu empresa <span class="required">*</span></label>
+                                <input type="text" id="company" name="company" required placeholder="Ej: Mi Empresa S.A.">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="industry">Giro de tu negocio <span class="required">*</span></label>
+                                <div class="custom-select">
+                                    <select id="industry" name="industry" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="retail">Retail / Comercio</option>
+                                        <option value="servicios">Servicios</option>
+                                        <option value="tecnologia">Tecnología</option>
+                                        <option value="manufactura">Manufactura</option>
+                                        <option value="alimentos">Alimentos y Bebidas</option>
+                                        <option value="salud">Salud</option>
+                                        <option value="educacion">Educación</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="employees">Número de empleados <span class="required">*</span></label>
+                                <div class="custom-select">
+                                    <select id="employees" name="employees" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="1-5">1-5 empleados</option>
+                                        <option value="6-10">6-10 empleados</option>
+                                        <option value="11-25">11-25 empleados</option>
+                                        <option value="26-50">26-50 empleados</option>
+                                        <option value="51+">51+ empleados</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interest">¿Qué te interesa de Stokk It? <span class="required">*</span></label>
+                            <div class="custom-select">
+                                <select id="interest" name="interest" required>
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="inventario">Control de inventario</option>
+                                    <option value="ventas">Gestión de ventas</option>
+                                    <option value="comisiones">Cálculo de comisiones</option>
+                                    <option value="reportes">Reportes y análisis</option>
+                                    <option value="todo">Solución completa</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Cuéntanos más sobre tu negocio <span class="required">*</span></label>
+                            <textarea id="message" name="message" required placeholder="Describe brevemente tus necesidades y cómo podemos ayudarte..."></textarea>
+                        </div>
+
+                        <input type="hidden" name="_subject" value="Nuevo contacto desde Stokk It">
+                        <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
+
+                        <button type="submit" class="btn-submit">
+                            <span>Enviar mensaje</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+
+                    <div class="contact-info">
+                        <h3>También puedes contactarnos directamente</h3>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <span>contacto@stokkit.com</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-phone"></i>
+                                <span>+52 618 261 7355</span>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fab fa-instagram"></i>
+                                <span>@stokkitMX</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="index.html" class="btn-back">
+                        <i class="fas fa-arrow-left"></i>
+                        Volver al inicio
+                    </a>
+                </div>
+
+                <div class="footer">
+                    <div>@stokkitMX</div>
+                    <div>contacto@stokkit.com</div>
+                    <div>+52 618 261 7355</div>
                 </div>
             </div>
-
-            <div class="form-group">
-                <label for="employees">Número de empleados <span class="required">*</span></label>
-                <div class="custom-select">
-                    <select id="employees" name="employees" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="1-5">1-5 empleados</option>
-                        <option value="6-10">6-10 empleados</option>
-                        <option value="11-25">11-25 empleados</option>
-                        <option value="26-50">26-50 empleados</option>
-                        <option value="51+">51+ empleados</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="interest">¿Qué te interesa de ROCA? <span class="required">*</span></label>
-                <div class="custom-select">
-                    <select id="interest" name="interest" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="inventario">Control de inventario</option>
-                        <option value="ventas">Gestión de ventas</option>
-                        <option value="comisiones">Cálculo de comisiones</option>
-                        <option value="reportes">Reportes y análisis</option>
-                        <option value="todo">Solución completa</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Cuéntanos más sobre tu negocio <span class="required">*</span></label>
-                <textarea id="message" name="message" required placeholder="Describe brevemente tus necesidades y cómo podemos ayudarte..."></textarea>
-            </div>
-
-            <input type="hidden" name="_subject" value="Nuevo contacto desde el sitio web de ROCA">
-            
-            <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
-
-            <button type="submit" class="btn-submit">Enviar mensaje ➜</button>
-        </form>
-
-        <a href="index.html" class="btn-back">← Volver al inicio</a>
-        </div>
         </div>
     </div>
 
@@ -192,6 +238,42 @@
         }
         
         document.addEventListener('DOMContentLoaded', initCustomSelect);
+    </script>
+   // Intersection Observer para animaciones al hacer scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Elementos a animar
+        const elementsToAnimate = document.querySelectorAll(`
+            .main-feature-card,
+            .feature-card,
+            .benefit-item,
+            .benefit-itemLAST,
+            .tagline-section,
+            .cta-final-section
+        `);
+
+        elementsToAnimate.forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(50px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            el.style.transitionDelay = `${index * 0.1}s`;
+            observer.observe(el);
+        });
+    });
     </script>
 </body>
 </html>
